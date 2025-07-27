@@ -31,6 +31,7 @@
     <button id="calculateTip">Calculate Tip</button>
     <div id="result"></div>
     <script>
+      // parse floatis used to convert string input to a number
       let bill= parseFloat(document.getElementById("billAmount").value);
       let tip= parseFloat(document.getElementById("tipPercentage").value);
     if(!isNaN(bill)&& !isNaN(tip)){
