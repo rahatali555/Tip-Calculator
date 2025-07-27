@@ -1,0 +1,45 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      input, button {
+        padding: 10px;
+        margin: 5px;
+        font-size: 16px;
+      }
+      #result {
+        margin-top: 20px;
+        font-size: 18px;
+        color: green;
+      }
+
+      
+    </style>
+    
+  </head>
+  <body>
+    <h1> 💰Tip Calculator</h1>
+    <input id="billAmount" type="number" placeholder="Enter bill amount">
+    <input id="tipPercentage" type="number" placeholder="Enter tip percentage %">
+    <button id="calculateTip">Calculate Tip</button>
+    <div id="result"></div>
+    <script>
+      let bill= parseFloat(document.getElementById("billAmount").value);
+      let tip= parseFloat(document.getElementById("tipPercentage").value);
+    if(!isNaN(bill)&& !isNaN(tip)){
+      let total=bill*(tip/100+1);
+      document.getElementById("result").innerText=`Total amount including tip: $${total.toFixed(2)}`;
+    }
+    else{
+      document.getElementById("result").innerText=" ⚠️Please enter valid bill amount and tip percentage.";
+    }
+    </script>
+  </body>
+  </html>
